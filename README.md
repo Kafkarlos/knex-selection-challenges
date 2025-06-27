@@ -1,6 +1,7 @@
 # Desafios Técnicos - Processo Seletivo Knex Consultoria
 
 Bem-vindo(a) ao processo seletivo da Knex Empresa Júnior de Computação! Este repositório contém os desafios técnicos que fazem parte do nosso processo de seleção.
+> Meu projeto está dentro da pasta front_end.
 
 ## Estrutura
 - `/frontend`: Contém os desafios relacionados a desenvolvimento frontend;
