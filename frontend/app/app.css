@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-lato: "Lato", sans-serif;
+  --font-mw: "Merriweather", serif;
+
+  --color-purple-10: #511d43;
+  --color-pink-10: #901e3e;
+  --color-red-10: #dc2525;
+  --color-green-10: #9bc09c;
+  --color-white-10: #e6efe6;
+}
+
+html,
+body {
+  @apply bg-white-10 dark:bg-gray-950;
+
+  background-color: var(--color-white-10);
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+
+  font-size: 62.5%;
+  font-family: var(--font-lato);
+}
+
+.toastify-custom {
+  font-size: 1.25rem;
+  font-family: var(--font-mw);
+  color: #2b2b2b;
+  background-color: #fefefe;
+}
+
+* img {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5vw;
+}
+nav ul li a {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-family: var(--font-mw);
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 10%;
+}
+
+nav ul li a:hover {
+  border: 2px solid #dc2525;
+}
+
+.btn {
+  background-color: var(--color-red-10);
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.user-card {
+  border: 2px solid black;
+  border-radius: 1vw;
+}
+
+.avatar {
+  border: 2px solid var(--color-green-10);
+  border-radius: 100%;
+}
+
+.user-info {
+  border: 2px solid var(--color-green-10);
+  border-radius: 1vw;
+}
+
+@media (width <= 48rem) {
+  .user-card {
+    border-radius: 3vw;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}

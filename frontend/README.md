@@ -1,103 +1,57 @@
-# Teste Técnico - Frontend
+<div align="center">
 
-> Knex Empresa Júnior de Computação
+# 💬Reden
 
-## Avaliação
+<img src="public/images/logo_reden.png" alt="logo" border="0" width="300"/>
+</div>
 
-Este teste é uma oportunidade para você demonstrar seus conhecimentos em desenvolvimento Frontend, boas práticas de programação e implementação de formulários e tratamentos de dados de API's. Avaliaremos diversos aspectos do seu código e da implementação da solução. Lembrando que não é necessário concluir tudo do projeto, fazer o que conseguir!
+<div align="center">
 
-## Instruções
+![React: v19.1.0](https://img.shields.io/badge/React-v19.1.0-blue)
+![React_Router: v7.6.2](https://img.shields.io/badge/React_Router-v7.6.2-red)
+![Tailwind: v3](https://img.shields.io/badge/Tailwind-v3-purple)
+![Status: concluído](https://img.shields.io/badge/Status-conclu%C3%ADdo-green)
 
-- Desenvolva a solução utilizando React + framework a sua escolha.
-- Utilize uma biblioteca para gerenciamento de formulários (React hook form, formik, ...entre outros)
-- Utilize um client HTTP para as requisições (Axios, GOT, ..., entre outros)
-- Utilize uma biblioteca para validação de dados (Zod, Yup, ...entre outros)
-- Você pode utilizar quaisquer outras bibliotecas que considerar necessárias
-- Adicione um arquivo README.md com instruções claras de como executar sua aplicação
-- O desenvolvimento deve ser individual
+</div>
 
-## Desafio
+## 📘Descrição do projeto
 
-Desenvolver uma tela que fará um CRUD (CREATE, READ, UPDATE, DELETE) de posts de um usuário aleatório na sua plataforma. A tela deverá conter um HEADER e FOOTER exemple para uma rede social, com logo e barras de navegações (mesmo que não sejam links de fato). Os posts serão feitos em requisição a API JSONPlaceholder e os dados do usuário serão obtidos pela API RandomUser.
+Este projeto é fruto de um desafio de front_end da empresa júnio Knex. Neste, foi necessário utilizar React para criar um projeto CRUD que simula-se uma rede social. Dessa forma, o Reden tem a capacidade de ver postagens de outros usuário, ver o usuário "logado", além de: adicionar novos posts, editar e deletar posts autorais. 
+![reden print](https://github.com/user-attachments/assets/e64782de-abd4-4871-8daf-5c62268251a5)
 
-### A solução deve focar em três pontos principais:
+# :hammer: Funcionalidades do projeto
+- `Ver usuário "logado"`: a partir de uma requisição a api RadomUser, toda vez que você entra na aplicação você pode ver seu usuário logado.
+- ![user print](https://github.com/user-attachments/assets/5a9b741c-9e71-4ecb-9797-7ee5bf562fd8)
+- `Ver posts de outros usuários`: também é possível ver posts de outros usuário, as informações dos usuário vem da api anterior e o conteúdo dos post vem da api JSONPlaceholder.
+- `Adicionar Post`: também é possível adicionar um novo post, após preencher um formulário e confirmar as informações do post.
+- ![add_gif](https://github.com/user-attachments/assets/bb782c6e-a2e7-40a3-a6e0-a35a3a5c1a06)
+- `Editar Post`: após adicionar um novo post você pode editá-lo.
+- ![edit _gif](https://github.com/user-attachments/assets/11980005-c623-4687-baa6-dfadefc818a3)
+- `Deletar Post`: você pode deletar seus posts.
+- ![del_gif](https://github.com/user-attachments/assets/298984ae-0fac-4a8e-acc8-1972aff7d799)
 
-1. Implementação de um formulário para montar o body da requisição do post.
-2. Validações em tempo real com feedback visual claro.
-3. Confirmação de envios e atualização da página (feita em cache).
-4. Tratamento das respostas com feedbacks e components populados.
+# 📁 Acesso ao projeto
+Você pode acessar o deploy do projeto nesse [link](https://knex-challenge-front-end.vercel.app) ou baixá-lo.
+# 🛠️ Abrir e rodar o projeto
+Ao baixar o projeto, para rodá-lo é necessário abrir o terminal e executar "npm run dev".
 
-### Do usuário do sistema principal (RandomUser)
+# ✅ Tecnologias utilizadas
+- **React** – Biblioteca principal para construção da interface
+- **TypeScript** – Tipagem estática para maior segurança no desenvolvimento
+- **React Router** – Gerenciamento de rotas
+- **React Hook Form** – Gerenciamento de formulários e validações
+- **Zod** – Validação de dados com schemas
+- **Axios** – Requisições HTTP
+- **React Toastify** – Feedback visual com notificações
+- **Tailwind CSS** – Estilização da interface com utilitários
 
-1. **Informações do usuário** - Fazer uma requisição de usuários na API e apresentar, de forma estética e coesa a redes sociais as informações do usuário "logado":
+## ⚙️ Ferramentas de Desenvolvimento
+- **Prettier** – Formatação automática de código
+- **ESLint** – Análise estática e padronização do código
+- **Jest** – Testes unitários e de integração
 
-   - Nome completo
-   - Foto de perfil
-   - Email
-   - Telefone
-   - Idade
-   - Localização (dê preferencia a BR).
+## Autor
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/154551754?v=4" width=115><br><sub>Carlos Henrique</sub>](https://github.com/Kafkarlos) |  
+| :---: | 
 
-2. **Do Token** - Guardar em Cookies o token SHA256 gerado pela requisição para persistência do usuário.
-   - ! A cada requisição nova a API, os usuários são alterados e sua aplicação deve atualizar isso caso dê reload.
 
-### Dos posts do sistema (JSONPlaceholder)
-
-1. **Informações do post** - Apresentar, de forma estética e coesa a redes sociais as informações requisitadas da API:
-
-   - Título do post
-   - Texto do post
-   - Atrelar o ID do post a um componente
-
-2. **Da estilização do componente Post** - Utilizar a mesma requisição feita sobre os usuários e popular a tela com:
-   - Imagem
-   - Nome
-   - Localização
-3. **Criar um novo post** - Ter um botão ao final da amostra para criar um novo post
-   - O post deve seguir a forma de criação disponível na documentação da API JSONPlaceholder
-
-### Requisitos Gerais de Validação
-
-- Feedback visual imediato para o usuário.
-- Mensagens de erro claras e específicas.
-- Validação em tempo real nos campos.
-- Permitir CRUD dos posts criados pelo usuário fictício.
-- Validar formulário completo antes do envio final.
-
-## O que não pode faltar neste projeto?
-
-- Uma releitura do protótipo, em Figma mesmo [preferencialmente] ou outra ferramenta análoga
-- Testes automatizados (Jest, React Testing Library)
-- Uso de Eslint e Prettier
-- Código limpo e semântico
-- Componentização adequada
-- Responsividade
-- Tratamento de erros
-
-## O que pode te destacar?
-
-- Uso de Typescript
-- Utilização de recursos modernos de UI
-- Deploy da aplicação
-- Animações fluidas nas transições
-- Cobertura de testes
-- Pouca usabilidade de recursos de IA.
-
-## Entrega
-
-- O código deve ser disponibilizado em um repositório público no GitHub
-- Inclua instruções detalhadas de como rodar o projeto
-- Screenshots ou GIFs da aplicação funcionando
-
-## Prazo
-
-O prazo para entrega está especificado no edital do processo seletivo.
-
-## Documentações das APIS.
-
-- Acesse a documentação da api RandomUser [aqui!](https://randomuser.me/documentation)
-- Acesse a documentação da api JSONPlaceholder [aqui!](https://jsonplaceholder.typicode.com/guide/)
-
-## Contato
-
-Em caso de dúvidas, utilize o canal de comunicação informado no início do processo seletivo.
