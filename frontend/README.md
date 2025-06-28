@@ -31,7 +31,7 @@ Este projeto é fruto de um desafio de front_end da empresa júnio Knex. Neste, 
 - ![del_gif](https://github.com/user-attachments/assets/298984ae-0fac-4a8e-acc8-1972aff7d799)
 
 # 📁 Acesso ao projeto
-Você pode acessar o deploy do projeto nesse [link](https://knex-challenge-front-end.vercel.app) ou baixá-lo.
+Você pode acessar o deploy do projeto nesse [link](https://knex-challenge-front-end.vercel.app) ou baixar a pasta front_end.
 # 🛠️ Abrir e rodar o projeto
 Ao baixar o projeto, para rodá-lo é necessário abrir o terminal e executar "npm run dev".
 
